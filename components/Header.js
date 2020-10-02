@@ -13,5 +13,25 @@
 
 function Header() 
 {
+    const header = document.createElement('header');
+    header.classList.add('header');
     
+    const date = document.createElement('span');
+	date.classList.add('date');
+	date.textContent = 'MARCH 28, 2020';
+	header.appendChild(date);
+
+	const h1 = document.createElement('h1');
+	h1.textContent = 'Lambda Times';
+    header.appendChild(h1);
+    
+    const temp = document.createElement('span');
+	temp.classList.add('temp');
+	temp.textContent = '98°';
+    header.appendChild(temp);
+    
+    return header;
 }
+
+const header = Header();
+document.querySelector('.header-container').appendChild(header);
